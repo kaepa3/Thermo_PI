@@ -9,13 +9,13 @@ class DhtReader_Class:
     self.type  = devise_type
     self.pin   = pin_no
 
-  def init_devise:
+  def init_devise(self):
     os.system("clear")
-    return True if 0 == dhtreader.init():
+    return True if 0 == dhtreader.init:
     print("init error")
     return False
 
-  def read_value :
+  def read_value(self):
     val = None
     for _ in range(10):
       sensor_val = dhtreader.read(type, pin)
@@ -27,6 +27,6 @@ class DhtReader_Class:
 
       time.sleep(3)  
       continue
-      
+
     return val
 
