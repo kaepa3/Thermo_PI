@@ -1,23 +1,13 @@
 
 # -*- coding: utf-8 -*-
-import dhtreader
-import os
-import time
+import dhtreader_class
+import commit_fata_class
 
 type = 11
 pin =26
 
-while True:
-  os.system("clear")
-  if 0 == dhtreader.init():
-    print("init error")
+reader = DhtReader_Class(type,pin)
+if True == reader.init_devise:
+   print reader.read_value
 
-  sensor_val = dhtreader.read(type, pin)
-  if sensor_val:
-    t,h = sensor_val
-    print("{0} {1}".format(t,h))
-  else:
-    print("error") 
 
-  time.sleep(3)  
-  continue
