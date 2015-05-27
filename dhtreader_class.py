@@ -10,14 +10,14 @@ class DhtReader_Class:
     self.pin   = pin_no
 
   def init_devise(self):
-    os.system("clear")
     return_value = True
-    if 0 != dhtreader.init:
+    if 0 == dhtreader.init():
       print("init error")
       return_value = False
     return return_value
 
   def read_value(self):
+
     val = None
     for _ in range(10):
       sensor_val = dhtreader.read(self.type, self.pin)
