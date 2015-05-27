@@ -3,6 +3,7 @@
 import dhtreader_class
 import commitdataclass
 
+
 type = 11
 pin =26
 
@@ -12,7 +13,5 @@ if True == reader.init_devise:
   if val != None:
     obj = CommitDataClass()
     obj.send_data(val.first, val.last)
-
-
 
 
