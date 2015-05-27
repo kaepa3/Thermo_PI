@@ -7,5 +7,6 @@ class Commit_Data_Class(object):
     super(Commit_Data_Classe, self).__init__()
     self.arg = arg
   
-  def send_data(ondo, shitudo)
+  def send_data(ondo, shitudo):
+    return "a"
 
