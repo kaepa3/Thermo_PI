@@ -11,9 +11,11 @@ class DhtReader_Class:
 
   def init_devise(self):
     os.system("clear")
-    return True if 0 == dhtreader.init:
-    print("init error")
-    return False
+    return_value = True
+    if 0 != dhtreader.init:
+      print("init error")
+      return_value = False
+    return return_value
 
   def read_value(self):
     val = None
