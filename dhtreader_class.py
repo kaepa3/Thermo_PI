@@ -10,11 +10,12 @@ class DhtReader_Class:
     self.pin   = pin_no
 
   def init_devise(self):
-    if 0 != dhtreader.init():
-
-      return True
-    print("init error")
-    return False
+    os.system("clear")
+    return_value = True
+    if 0 != dhtreader.init:
+      print("init error")
+      return_value = False
+    return return_value
 
   def read_value(self):
     val = None
